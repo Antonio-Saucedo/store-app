@@ -8,8 +8,15 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = [...products];
+  show = [''];
 
   share() {
     window.alert('The product has been shared!');
+  }
+
+  showDetails(product: string) {
+    this.show.includes(product)
+      ? this.show.splice(this.show.indexOf(product), 1)
+      : this.show.push(product);
   }
 }
