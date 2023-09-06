@@ -19,4 +19,8 @@ export class ProductListComponent {
       ? this.show.splice(this.show.indexOf(product), 1)
       : this.show.push(product);
   }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale.');
+  }
 }

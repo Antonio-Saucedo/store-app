@@ -2,14 +2,24 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a (click)="showDetails(product.name)" [title]="product.name + ' details'">{{
-      product.name
-    }}</a>
+    <a
+      (click)="showDetails(product.name)"
+      [title]="product.name + ' details'"
+      >{{ product.name }}</a
+    >
   </h3>
 
-  <p *ngIf="product.description" [ngClass]="show.includes(product.name) ? '' : 'hidden'">
+  <p
+    *ngIf="product.description"
+    [ngClass]="show.includes(product.name) ? '' : 'hidden'"
+  >
     Description: {{ product.description }}
   </p>
 
   <button type="button" (click)="share()">Share</button>
+
+  <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()"
+  ></app-product-alerts>
 </div>
