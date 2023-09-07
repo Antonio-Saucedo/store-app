@@ -7,9 +7,14 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: rgb(77, 74, 74);
+}
+
 body {
   margin: 0 auto;
   width: 400px;
+  background-color: white;
 }
 
 .container {
@@ -19,7 +24,7 @@ body {
 
 app-product-list {
   & div {
-    padding: 5px 0;
+    padding: 5px;
 
     & h3 {
       color: #1976d2;
@@ -35,7 +40,7 @@ h1 {
 
 h2 {
   font-size: 20px;
-  margin-top: 5px;
+  padding: 5px;
 }
 
 h1,
@@ -82,7 +87,7 @@ label {
 }
 
 /* Button */
-.button,
+.fancy-button,
 button {
   display: inline-flex;
   align-items: center;
@@ -93,6 +98,7 @@ button {
   background-color: #1976d2;
   color: white;
   border: none;
+  margin-top: 5px;
 
   &:hover {
     opacity: 0.8;
@@ -110,6 +116,7 @@ button {
 .fancy-button {
   background-color: white;
   color: #1976d2;
+  margin: 0;
 
   & i.material-icons {
     color: #1976d2;
@@ -155,6 +162,6 @@ app-top-bar {
 app-product-details {
   & div,
   & h4 {
-    padding: 5px 0;
+    padding: 5px;
   }
 }
